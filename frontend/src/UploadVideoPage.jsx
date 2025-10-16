@@ -6,7 +6,6 @@ const UploadPage = () => {
     description: '',
     videoUrl: '',
     thumbnail: '',
-    visibility: 'public',
     category: 'education',
     tags: ''
   });
@@ -47,7 +46,6 @@ const UploadPage = () => {
       description: '',
       videoUrl: '',
       thumbnail: '',
-      visibility: 'public',
       category: 'education',
       tags: ''
     });
@@ -57,7 +55,7 @@ const UploadPage = () => {
 
   if (uploadComplete) {
     return (
-      <div className="min-h-screen bg-gray-50 p-6">
+      <div className="min-h-screen bg-gray-200 p-6">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6">
           <div className="text-center py-8">
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -181,44 +179,7 @@ const UploadPage = () => {
 
             {/* Right Column - Settings */}
             <div className="space-y-6">
-              <div className="border border-gray-200 rounded-md p-4">
-                <h3 className="font-medium text-gray-800 mb-3">Visibility</h3>
-                <div className="space-y-3">
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="visibility"
-                      value="public"
-                      checked={videoData.visibility === 'public'}
-                      onChange={handleChange}
-                      className="text-blue-600 focus:ring-blue-500"
-                    />
-                    <span className="ml-2 text-gray-700">Public</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="visibility"
-                      value="unlisted"
-                      checked={videoData.visibility === 'unlisted'}
-                      onChange={handleChange}
-                      className="text-blue-600 focus:ring-blue-500"
-                    />
-                    <span className="ml-2 text-gray-700">Unlisted</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="visibility"
-                      value="private"
-                      checked={videoData.visibility === 'private'}
-                      onChange={handleChange}
-                      className="text-blue-600 focus:ring-blue-500"
-                    />
-                    <span className="ml-2 text-gray-700">Private</span>
-                  </label>
-                </div>
-              </div>
+            
 
               <div className="border border-gray-200 rounded-md p-4">
                 <h3 className="font-medium text-gray-800 mb-3">Category</h3>
